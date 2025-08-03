@@ -21,9 +21,9 @@ import { setCredentials } from '@/lib/services/authSlice';
 const loginSchema = z.object({
   email: z.string()
     .min(1, 'Email is required')
-    .regex(/@edu\.veritas\.edu\.ng$/, 'Email must end with @edu.veritas.edu.ng'),
+    .regex(/veritas\.edu\.ng$/, 'Email must end with .veritas.edu.ng'),
   password: z.string()
-    .min(8, 'Password must be at least 8 characters')
+    .min(5, 'Password must be at least 5 characters')
     .max(50, 'Password must not exceed 50 characters'),
 });
 
